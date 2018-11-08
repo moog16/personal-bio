@@ -1,0 +1,21 @@
+@import '@material/react-top-app-bar/index';
+
+.App {
+  height: 200vh;
+  background: lightblue;
+}
+
+.top-app-bar__fixed-adjust {
+  height: 100%;
+}
+
+.content {
+  background: pink;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.content__topper {
+  height: 24%;
+}

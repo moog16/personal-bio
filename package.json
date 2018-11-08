@@ -1,8 +1,10 @@
 {
-  "name": "cra2testapp",
+  "name": "mattgoo-personal-bio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material/react-top-app-bar": "^0.6.1",
+    "node-sass": "^4.9.4",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-scripts": "2.0.5"
