@@ -12,6 +12,7 @@ exports.handler = async (event, context) => {
     .catch(error => ({ statusCode: 422, body: String(error) }));
 };
 
+// David Walsh
 // Changes XML to JSON
 function xmlToJson(xml) {
 
