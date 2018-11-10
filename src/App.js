@@ -20,9 +20,9 @@ class App extends Component {
   };
 
   fetchMediumPosts = (async () => {
-    const mediumUrl = 'https://medium.com/feed/@moog16';
-    const response = await fetch(mediumUrl);
-    console.log(response)
+    // const mediumUrl = 'https://medium.com/feed/@moog16';
+    // const response = await fetch(mediumUrl);
+    // console.log(response)
   })
 
   calculateHeadshotTranslation = (_, isInitializing) => {
@@ -77,6 +77,7 @@ class App extends Component {
           <div className='content'>
             <Headshot ref={this.headshotMain} raised style={headshotStyle}/>
 
+            <a href='/.netlify/functions/hello'>click</a>
 
           </div>
         </TopAppBarFixedAdjust>
