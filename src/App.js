@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Headshot from './Headshot';
 import TopAppBar, {TopAppBarFixedAdjust} from '@material/react-top-app-bar';
-import Feed from 'rss-to-json';
+
 import './App.scss';
 import './fonts.scss';
 
 
 // constants
-const topAppBarActionItemPadding = 12;
+const topAppBarActionItemPadding = 0;
 const headshotWidth = 48;
 const halfHeadshotWidth = headshotWidth/2;
 
@@ -20,9 +20,9 @@ class App extends Component {
   };
 
   fetchMediumPosts = (async () => {
-    // const mediumUrl = 'https://medium.com/feed/@moog16';
-    // const response = await fetch(mediumUrl);
-    // console.log(response)
+    const response = fetch('/.netlify/functions/hello');
+    console.log('response')
+    console.log(response)
   })
 
   calculateHeadshotTranslation = (_, isInitializing) => {
