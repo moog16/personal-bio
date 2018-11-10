@@ -1,8 +1,13 @@
+@import './colors';
 @import '@material/react-top-app-bar/index';
 
 .App {
   height: 200vh;
-  background: lightblue;
+  background: $secondary-light;
+}
+
+.mdc-top-app-bar {
+  @include mdc-top-app-bar-fill-color-accessible($primary-color);
 }
 
 .top-app-bar__fixed-adjust {
@@ -10,12 +15,31 @@
 }
 
 .content {
-  background: pink;
   height: 100%;
   display: flex;
   justify-content: center;
 }
 
-.content__topper {
+.hero-image__container {
+  position: relative;
   height: 24%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .header {
+    color: $secondary-color;
+    z-index: 1;
+  }
+
+  .hero-image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('./images/gorde.jpg');
+    background-position: center;
+    background-size: cover;
+    opacity: 0.9;
+    // filter: grayscale(.5);
+  }
 }

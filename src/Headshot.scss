@@ -1,9 +1,15 @@
+$headshotSize: 48px;
+$headshotLargeSize: 40vw;
 
 .headshot {
   z-index: 20;
+  width: $headshotSize;
+  height: $headshotSize;
 }
 
 .headshot--raised {
   position: relative;
-  top: -24px;
+  top: -#{$headshotLargeSize/2};
+  width: $headshotLargeSize;
+  height: $headshotLargeSize;
 }
