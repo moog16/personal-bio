@@ -20,9 +20,10 @@ class App extends Component {
   };
 
   fetchMediumPosts = (async () => {
-    const response = fetch('/.netlify/functions/hello');
-    console.log('response')
-    console.log(response)
+    const response = await fetch('/.netlify/functions/hello');
+    // console.log('response')
+    // window.helloTest = response
+    const reader = await response.body.getReader();
   })
 
   calculateHeadshotTranslation = (_, isInitializing) => {
