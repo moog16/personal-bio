@@ -4,12 +4,14 @@ const API_ENDPOINT = 'https://medium.com/feed/@moog16';
 
 exports.handler = async (event, context) => {
   const response = await fetch(API_ENDPOINT);
-    .then(response => xmlToJson(response))
-    .then(data => ({
-      statusCode: 200,
-      body: data
-    }))
-    .catch(error => ({ statusCode: 422, body: String(error) }));
+    let data = await response.xmlToJson(response);
+    console.log('DATATATAT ', data)
+    return data;
+    // .then(data => ({
+    //   statusCode: 200,
+    //   body: data
+    // }))
+    // .catch(error => ({ statusCode: 422, body: String(error) }));
 };
 
 // David Walsh
